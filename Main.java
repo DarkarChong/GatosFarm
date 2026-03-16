@@ -88,6 +88,6 @@ public class Main {
         SerVivo animalGenerico = new SerVivo("Genérico", "??");
         animalGenerico.describir();   // → Animal.describir() (base)
 
-        System.out.println("\n¡El café cerró! 🌙");
+        System.out.println("\n¡El café cerró! ");
     }
 }

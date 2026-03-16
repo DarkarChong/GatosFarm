@@ -1,18 +1,17 @@
 // CLASE: CafeGato
 // Esta clase demuestra:
-//   ✅ Objetos como parámetros (recibir Gato en un método)
-//   ✅ Llamar métodos del objeto recibido (gato.isRonroneando())
-//   ✅ Un método que llama a otro de la misma clase
-//   ✅ Instancia inline: new Gato() dentro del paréntesis
-//   ✅ Polimorfismo: examinar(Animal a) acepta Gato Y GatoPersa
-// ══════════════════════════════════════════════════════════════
-import ClaseNieta_GatoPersa.GatoPersa;
+//    Objetos como parámetros (recibir Gato en un método)
+//    Llamar métodos del objeto recibido (gato.isRonroneando())
+//    Un método que llama a otro de la misma clase
+//    Instancia inline: new Gato() dentro del paréntesis
+//    Polimorfismo: examinar(Animal a) acepta Gato Y GatoPersa
+
 import ClaseHija_Gato.Gato;
 import ClasePadre.SerVivo;
 
 public class CafeGato {
 
-    // ── MÉTODO A: recibe un objeto Gato como parámetro ────────
+    // ── MÉTODO A: recibe un objeto Gato como parámetro 
     // "Gato gato" → el tipo es Gato, el nombre del parámetro es "gato"
     // Dentro podemos llamar CUALQUIER método público de Gato:
     //   gato.isRonroneando()
@@ -28,11 +27,11 @@ public class CafeGato {
 
         if (gatito.isRonroneando()) {
             // El gato ronronea → es buena compañía → puede entrar
-            System.out.println("   ✅ " + gatito.getNombre() + " puede entrar.");
+            System.out.println(" Good " + gatito.getNombre() + " puede entrar.");
             return true;
         } else {
             // El gato no ronronea → podría estresar a los otros
-            System.out.println("   ❌ " + gatito.getNombre() + " no puede entrar hoy.");
+            System.out.println(" Bad " + gatito.getNombre() + " no puede entrar hoy.");
             return false;
         }
     }
@@ -63,7 +62,7 @@ public class CafeGato {
     //   examinar(new Gato(...))       → ejecuta Gato.describir()
     //   examinar(new GatoPersa(...))  → ejecuta GatoPersa.describir()
     public void examinar(SerVivo animal) {
-        System.out.println("\n🔍 Examinando un nuevo animal:");
+        System.out.println("\n Examinando un nuevo animal:");
         animal.describir();   // polimorfismo en acción
     }
 }
